@@ -6,6 +6,17 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SyncAPI",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "de.dietzm.gcs2hana.services.SyncAPI",
+            "args": "",
+            "projectName": "SimpleJavaService"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch)",
             "request": "launch",
             "cwd": "${workspaceFolder}",

@@ -1,4 +1,4 @@
-package de.dietzm.gcs2hana.loader;
+package de.dietzm.gcs2hana.hana;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import de.dietzm.gcs2hana.db.DatabaseOrganizer;
+import de.dietzm.gcs2hana.base.DatabaseOrganizer;
 
 public class FileLoaderAndTransferer {
 
@@ -38,7 +38,7 @@ public class FileLoaderAndTransferer {
 		traverseFolder(rootFolder, fileList);
 
 		// Get a DB connection
-		Connection con = DatabaseOrganizer.getInstance().getConnection();	
+		Connection con = DatabaseOrganizer.getInstance("HANA").getConnection();	
 		Iterator<File> fileIterator = fileList.iterator();
 		
 		// Loop files and store in db

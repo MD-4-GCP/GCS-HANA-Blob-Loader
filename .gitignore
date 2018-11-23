@@ -1,1 +1,3 @@
 /target/
+/environment/*
+!/environment/setCredentials.sh
